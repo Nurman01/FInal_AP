@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Final Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-color: #EADFB4; /* Cool background color */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff; /* Text color */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      padding: 40px;
+      background-color: #51829B; /* Dark background color */
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .title-area {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-head {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #9BB0C1; /* Attractive text color */
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .pred-container {
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .predictions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .result {
+      background-color: #F6995C; /* Green background color */
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    #file-container {
+      margin-bottom: 30px;
+    }
+
+    #predictions img {
+      width: 180px;
+      height: 180px;
+      margin-right: 30px;
+      border-radius: 10px;
+    }
+
+    #predictions .pred-container {
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <section class='title-area'>
+      <h1>Fruits-Vegetable Classification</h1>
+    </section>
+
+    <section>
+      <p class='section-head'>Status</p>
+      <div id="status"></div>
+    </section>
+
+    <section>
+      <p class='section-head'>Model Output</p>
+
+      <div id="file-container">
+        Upload an image: <input type="file" id="files" name="files[]" multiple />
+      </div>
+
+      <div class="predictions" id="predictions"></div>
+
+      <img style="display: none" id="cat" src="cat.jpg" width=192 height=192 />
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <script src="index.js"></script>
+  </div>
+</body>
+
+</html>
